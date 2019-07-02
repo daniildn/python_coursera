@@ -1,0 +1,12 @@
+import json
+from functools import wraps
+
+def to_json(f):
+
+    @wraps(f)
+    def wrapped(*argw, **kargw):
+        result = f(*argw, **kargw)
+        return json.dumps(result)
+    return wrapped
+
+
