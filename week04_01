@@ -1,0 +1,49 @@
+import os
+import tempfile
+
+
+class File:
+    def __init__(self, path):
+        self.path = r"{}".format(path)
+        self.current_line = 0
+        with open(self.path, "w") as f:
+            pass
+
+    def read(self):
+        with open(self.path, 'r') as f:
+            return f.read()
+
+    def write(self, string_for_write):
+        with open(self.path, "a") as f:
+            f.write(string_for_write)
+        # В этом случае создается новый файл и файловый объект,
+        # в котором содержимое второго файла добавляется к содержимому
+        # первого файла. Новый файл должен создаваться в директории,
+        # полученной с помощью tempfile.gettempdir.
+        # Для получения нового пути можно использовать os.path.join.
+
+    def __add__(self, other):
+        with open(self.path, 'r') as file_object_first, open(other.path, 'r') as file_object_second:
+            data = file_object_first.read() + file_object_second.read()
+            new_object = File(os.path.join(tempfile.gettempdir(), 'new'))
+            new_object.write(data)
+            return new_object
+        # вывод обьекта при вызове функции print
+
+    def __str__(self):
+        return self.path
+
+    # Итерация
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        with open(self.path, "r") as f:
+            f.seek(self.current_line)
+            line = f.readline()
+            if not line:
+                self.current_line = 0
+                raise StopIteration
+            self.current_line = f.tell()
+            return line
+
