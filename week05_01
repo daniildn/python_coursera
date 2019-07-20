@@ -1,0 +1,94 @@
+import socket
+import time
+
+
+class Client:
+
+    def __init__(self, host, port, timeout=None):
+        self._host = str(host)
+        self._port = port
+        self._timeout = timeout
+
+        # + Метод put принимает первым аргументом название метрики, вторым численное значение, третьим -
+        # необязательный именованный аргумент timestamp.
+
+    @staticmethod
+    def _reads(s):
+        pass
+        decode_str = s.decode()
+        status, data = decode_str.split("\n", 1)
+        data = data.strip("\n")
+        # If answer is ok\n\n, server didn't find value for key and method get will return empty dict
+        if decode_str == "ok\n\n":
+            return "no"
+        elif status == "error":
+            raise ClientError
+        return data
+
+    def put(self, metric, value, timestamp=None):
+        with socket.create_connection((self._host, self._port), self._timeout) as sock:
+
+            # If user called method put without argument 'timestamp'
+            if not timestamp:
+                timestamp = int(time.time())
+
+            data = "put {} {} {}\n".format(metric, float(value), timestamp)
+
+            # Returns nothing in case of successful sending or throws an exception ClientError in case of unsuccessful
+            try:
+                sock.sendall(data.encode())
+            except socket.error:
+                raise ClientError
+            getting_data = b""
+
+            # Read answer from socket
+            while not getting_data.endswith(b"\n\n"):
+                getting_data += sock.recv(1024)
+
+            # Read the answer
+        self._reads(getting_data)
+
+    def get(self, mes):
+        # If key is none, method get returns empty dict
+        if mes == "":
+            return dict()
+
+        # Connect to server
+        with socket.create_connection((self._host, self._port), self._timeout) as sock:
+            request = "get {}\n".format(mes)
+
+            # Send request to server
+            try:
+                sock.send(request.encode("utf-8"))
+            except socket.error:
+                raise ClientError
+
+            getting_data = b""
+
+            # Read answer from socket
+            while not getting_data.endswith(b"\n\n"):
+                getting_data += sock.recv(1024)
+
+            # Read the answer
+            data = self._reads(getting_data)
+            if data == "no":
+                return dict()
+            result = {}
+            # Fill the result
+            for d in data.split("\n"):
+                key, value, timestamp = d.split()
+
+                # Add value in result
+                if key not in result:
+                    result[key] = []
+
+                result[key].append((int(timestamp), float(value)))
+            if mes == "*":
+                return result
+            else:
+                return {mes: result.get(mes)}
+
+
+# Exeption of client
+class ClientError(Exception):
+    pass
