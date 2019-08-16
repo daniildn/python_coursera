@@ -1,4 +1,4 @@
-'''It's working. '''
+'''It's working. s'''
 
 class TestFactorize(unittest.TestCase):
     # Type float and str (value 'string', 1.5)
