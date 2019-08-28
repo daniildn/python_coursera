@@ -52,7 +52,6 @@ class Polyline:
                 self.speeds[p] = (self.speeds[p][0], -self.speeds[p][1])
 
         # "Отрисовка" точек
-
     def draw_points(self, points=None, style="points", width=3, color=(255, 255, 255)):
         # points = points if points else self.points
         if style == "line":
