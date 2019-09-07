@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="442677d9-e3ab-4aaa-80ae-1460415fffdb" name="Default Changelist" comment="" />
+    <list default="true" id="442677d9-e3ab-4aaa-80ae-1460415fffdb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Adapter-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Observer-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Adapter.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Observer.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week03_02__Adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week03_03__observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week04_01__ChainResponsibility" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week02_02.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +44,13 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -112,7 +125,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week02_02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week02_02__vector2D.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +195,11 @@
       <workItem from="1566760021341" duration="15012000" />
       <workItem from="1566902199740" duration="1977000" />
       <workItem from="1566931337916" duration="485000" />
-      <workItem from="1566931911198" duration="2907000" />
+      <workItem from="1566931911198" duration="8726000" />
+      <workItem from="1567090578112" duration="7973000" />
+      <workItem from="1567272947748" duration="1000" />
+      <workItem from="1567622280753" duration="1188000" />
+      <workItem from="1567856021457" duration="676000" />
     </task>
     <servers />
   </component>
@@ -206,7 +223,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_coursera_second$week02_02.coverage" NAME="week02_02 Coverage Results" MODIFIED="1566995808575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_coursera_second$week02_02.coverage" NAME="week02_02 Coverage Results" MODIFIED="1567079028295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$n.coverage" NAME="n Coverage Results" MODIFIED="1566506480981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$week03_01.coverage" NAME="week03_01 Coverage Results" MODIFIED="1566910909034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

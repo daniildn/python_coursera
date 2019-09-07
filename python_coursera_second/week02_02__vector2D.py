@@ -12,18 +12,21 @@ class Vec2d:
         self.y = y
 
     def __getitem__(self, key):
-        return
+        if key == 0:
+            return self.x
+        elif key == 1:
+            return self.y
 
-    def __sub__(self, v):  # разность двух векторов
+    def _sub_(self, v):  # разность двух векторов
         return Vec2d(self.x - v.x, self.y - v.y)
 
-    def __add__(self, v):  # сумма двух векторов
-        return Vec2d(self.x + v.x, self.y + v.y)
+    def _add_(self, v):  # сумма двух векторов
+        return Vec2d(self.x + v[0], self.y + v[1])
 
-    def __len__(self):  # длинна вектора
+    def _len_(self):  # длина вектора
         return math.sqrt(self.x ** 2 + self.y ** 2)
 
-    def __mul__(self, v):  # скалярное умножение векторов
+    def _mul_(self, v):  # скалярное умножение векторов
         if isinstance(v, Vec2d):
             return Vec2d(self.x * v.x, self.y * v.y)
         elif isinstance(v, int) or isinstance(v, float):
@@ -45,13 +48,14 @@ class Polyline:
 
     def set_points(self):
         for p in range(len(self.points)):
-            self.points[p] = self.points[p] + self.speeds[p]
+            self.points[p] = self.points[p]._add_(self.speeds[p])
             if self.points[p][0] > SCREEN_DIM[0] or self.points[p][0] < 0:
                 self.speeds[p] = (- self.speeds[p][0], self.speeds[p][1])
             if self.points[p][1] > SCREEN_DIM[1] or self.points[p][1] < 0:
                 self.speeds[p] = (self.speeds[p][0], -self.speeds[p][1])
 
-        # "Отрисовка" точек
+        # "Отрисовка" точекec2d' object does not support indexing
+
     def draw_points(self, points=None, style="points", width=3, color=(255, 255, 255)):
         # points = points if points else self.points
         if style == "line":
@@ -64,14 +68,6 @@ class Polyline:
 
         # Персчитывание координат опорных точек
 
-    def set_points(self):
-        for p in range(len(self.points)):
-            self.points[p] = self.points[p] + self.speeds[p]
-            if self.points[p][0] > SCREEN_DIM[0] or self.points[p][0] < 0:
-                self.speeds[p] = (- self.speeds[p][0], self.speeds[p][1])
-            if self.points[p][1] > SCREEN_DIM[1] or self.points[p][1] < 0:
-                self.speeds[p] = (self.speeds[p][0], -self.speeds[p][1])
-
 
 class Knot(Polyline):
     def get_point(self, points, alpha, deg=None):
@@ -79,7 +75,7 @@ class Knot(Polyline):
             deg = len(points) - 1
         if deg == 0:
             return points[0]
-        return points[deg] * alpha + self.get_point(points, alpha, deg - 1) * (1 - alpha)
+        return points[deg]._mul_(alpha)._add_(self.get_point(points, alpha, deg - 1)._mul_((1 - alpha)))
 
     def get_points(self, base_points, count):
         alpha = 1 / count
@@ -94,9 +90,9 @@ class Knot(Polyline):
         res = []
         for i in range(-2, len(self.points) - 2):
             ptn = []
-            ptn.append((self.points[i] + self.points[i + 1]) * 0.5)
+            ptn.append(self.points[i]._add_(self.points[i + 1])._mul_(0.5))
             ptn.append(self.points[i + 1])
-            ptn.append((self.points[i + 1] + self.points[i + 2]) * 0.5)
+            ptn.append(self.points[i + 1]._add_(self.points[i + 2])._mul_(0.5))
 
             res.extend(self.get_points(ptn, count))
         return res
@@ -126,7 +122,8 @@ def draw_help():
         gameDisplay.blit(font2.render(
             text[1], True, (128, 128, 255)), (200, 100 + 30 * i))
 
-
+def display_help():
+    pass
 # Основная программа
 if __name__ == "__main__":
     pygame.init()
@@ -142,7 +139,7 @@ if __name__ == "__main__":
     knot = Knot()
     hue = 0
     color = pygame.Color(0)
-
+    display_help()
     while working:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
