@@ -5,14 +5,18 @@
       <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Adapter-checkpoint.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Observer-checkpoint.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/improved_chain_of_responsibility-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChainResponsibilityExample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Observer.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/improved_chain_of_responsibility.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week03_02__Adapter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week03_03__observer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week04_01__ChainResponsibility" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week04_02__AbstractFactory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 03/Adapter.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 03/Observer.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 03/week03_02__Adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 03/week03_03__observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/AbstractFactoryExample.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/ChainResponsibilityExample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/Yaml.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/improved_chain_of_responsibility.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/week04_01__ChainResponsibility" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/week04_02__AbstractFactory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/week04_03__Yamltask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/yamlExample.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,10 +54,14 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/week 03" />
+      <recent name="$PROJECT_DIR$/week 04" />
+      <recent name="$PROJECT_DIR$/week 02" />
+      <recent name="$PROJECT_DIR$/week 01" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -69,7 +77,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.week02_02">
+  <component name="RunManager" selected="Python.week04_02__AbstractFactory">
+    <configuration name="AbstractFactoryExample" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_coursera_second" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 04/AbstractFactoryExample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ChainResponsibilityExample" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_coursera_second" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,29 +113,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChainResponsibilityExample" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_coursera_second" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 04/ChainResponsibilityExample" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,29 +135,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week02_02__vector2D.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="week03_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_coursera_second" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week03_01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 02/week02_02__vector2D.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,7 +157,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week04_01__ChainResponsibility" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 04/week04_01__ChainResponsibility" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="week04_02__AbstractFactory" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_coursera_second" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 04/week04_02__AbstractFactory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.week04_02__AbstractFactory" />
+        <item itemvalue="Python.AbstractFactoryExample" />
         <item itemvalue="Python.week02_02" />
         <item itemvalue="Python.ChainResponsibilityExample" />
         <item itemvalue="Python.week04_01__ChainResponsibility" />
-        <item itemvalue="Python.week03_01" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +216,8 @@
       <workItem from="1567090578112" duration="7973000" />
       <workItem from="1567272947748" duration="1000" />
       <workItem from="1567622280753" duration="1188000" />
-      <workItem from="1567856021457" duration="12063000" />
+      <workItem from="1567856021457" duration="22451000" />
+      <workItem from="1568217289950" duration="1135000" />
     </task>
     <servers />
   </component>
@@ -235,6 +244,8 @@
     <SUITE FILE_PATH="coverage/python_coursera_second$week02_02.coverage" NAME="week02_02 Coverage Results" MODIFIED="1567931577812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$n.coverage" NAME="n Coverage Results" MODIFIED="1566506480981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$ChainResponsibilityExample.coverage" NAME="ChainResponsibilityExample Coverage Results" MODIFIED="1567930647081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_coursera_second$AbstractFactoryExample.coverage" NAME="AbstractFactoryExample Coverage Results" MODIFIED="1568146883765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_coursera_second$week04_02__AbstractFactory.coverage" NAME="week04_02__AbstractFactory Coverage Results" MODIFIED="1568152457962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$week04_01__ChainResponsibility.coverage" NAME="week04_01__ChainResponsibility Coverage Results" MODIFIED="1567930235123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_coursera_second$week03_01.coverage" NAME="week03_01 Coverage Results" MODIFIED="1566910909034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
