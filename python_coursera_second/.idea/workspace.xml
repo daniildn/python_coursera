@@ -9,6 +9,7 @@
       <change afterPath="$PROJECT_DIR$/week 03/Observer.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 03/week03_02__Adapter.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 03/week03_03__observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 04/.ipynb_checkpoints/Yaml-checkpoint.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 04/AbstractFactoryExample.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 04/ChainResponsibilityExample" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 04/Yaml.ipynb" afterDir="false" />
@@ -17,6 +18,7 @@
       <change afterPath="$PROJECT_DIR$/week 04/week04_02__AbstractFactory.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 04/week04_03__Yamltask.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week 04/yamlExample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week 04/Yaml.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/week 04/Yaml.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +52,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -217,7 +219,7 @@
       <workItem from="1567272947748" duration="1000" />
       <workItem from="1567622280753" duration="1188000" />
       <workItem from="1567856021457" duration="22451000" />
-      <workItem from="1568217289950" duration="1135000" />
+      <workItem from="1568217289950" duration="3676000" />
     </task>
     <servers />
   </component>
