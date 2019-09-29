@@ -1,15 +1,21 @@
 from abc import ABC, abstractmethod
+from typing import Any, Union
+
 import pygame
 import random
+
+from pygame.surface import SurfaceType
 
 
 def create_sprite(img, sprite_size):
     icon = pygame.image.load(img).convert_alpha()
     icon = pygame.transform.scale(icon, (sprite_size, sprite_size))
-    sprite = pygame.Surface((sprite_size, sprite_size), pygame.HWSURFACE)
+    sprite: Union[SurfaceType, Any] = pygame.Surface((sprite_size, sprite_size), pygame.HWSURFACE)
     sprite.blit(icon, (0, 0))
     return sprite
 
+ class AbstractObject(ABC):
+     pass
 
 class Interactive(ABC):
 
