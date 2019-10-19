@@ -1,51 +1,68 @@
 from abc import ABC, abstractmethod
-from typing import Any, Union
-
 import pygame
-import random
-
-from pygame.surface import SurfaceType
 
 
 def create_sprite(img, sprite_size):
     icon = pygame.image.load(img).convert_alpha()
     icon = pygame.transform.scale(icon, (sprite_size, sprite_size))
-    sprite: Union[SurfaceType, Any] = pygame.Surface((sprite_size, sprite_size), pygame.HWSURFACE)
+    sprite = pygame.Surface((sprite_size, sprite_size), pygame.HWSURFACE)
     sprite.blit(icon, (0, 0))
     return sprite
 
- class AbstractObject(ABC):
-     pass
+
+class AbstractObject(ABC):
+    @abstractmethod
+    def __init__(self, icon, stats, position):
+        self.sprite = icon
+        self.stats = stats
+        self.position = position
+
+    def draw(self, display):
+        pixels = self.position[0]*60, self.position[1]*60
+        display.blit(self.sprite, pixels)
+
 
 class Interactive(ABC):
-
     @abstractmethod
     def interact(self, engine, hero):
         pass
 
 
-class Ally(AbstractObject, Interactive):
-
-    def __init__(self, icon, action, position):
-        self.sprite = icon
-        self.action = action
-        self.position = position
-
-    def interact(self, engine, hero):
-        self.action(engine, hero)
-
-
 class Creature(AbstractObject):
 
     def __init__(self, icon, stats, position):
-        self.sprite = icon
-        self.stats = stats
-        self.position = position
+        super().__init__(icon, stats, position)
         self.calc_max_HP()
         self.hp = self.max_hp
 
     def calc_max_HP(self):
         self.max_hp = 5 + self.stats["endurance"] * 2
+
+
+class Ally(AbstractObject, Interactive):
+
+    def __init__(self, icon, action, position):
+        super().__init__(icon, {}, position)
+        self.action = action
+
+    def interact(self, engine, hero):
+        self.action(engine, hero)
+
+
+class Enemy(Creature, Interactive):
+
+    def __init__(self, icon, stats, xp, position):
+        super().__init__(icon, stats, position)
+        self.xp = xp
+
+    def interact(self, engine, hero):
+        hero.hp -= self.stats['strength']
+        if hero.hp <= 0:
+            exit()
+        engine.hero.exp += self.xp
+        levels = hero.level_up()
+        for message in levels:
+            engine.notify(message)
 
 
 class Hero(Creature):
@@ -70,6 +87,7 @@ class Hero(Creature):
 class Effect(Hero):
 
     def __init__(self, base):
+
         self.base = base
         self.stats = self.base.stats.copy()
         self.apply_effect()
@@ -131,5 +149,24 @@ class Effect(Hero):
         pass
 
 
-# FIXME
-# add classes
+class Berserk(Effect):
+    def apply_effect(self):
+        self.stats['strength'] += 7
+        self.stats['endurance'] += 7
+        self.stats['luck'] += 7
+        self.max_hp += 50
+        self.stats['intelligence'] -= 3
+
+
+class Blessing(Effect):
+    def apply_effect(self):
+        self.stats['strength'] += 2
+        self.stats['endurance'] += 2
+        self.stats['intelligence'] += 2
+        self.stats['luck'] += 2
+
+
+class Weakness(Effect):
+    def apply_effect(self):
+        self.stats['strength'] -= 4
+        self.stats['endurance'] -= 4
