@@ -18,4 +18,11 @@ print(type(re.findall(r"(\w){2,}", text)))
 
 print(re.sub(r"[а|A]","s", text))
 
+text = 'a123b45с6d'
+
+def find_all_digits(text):
+    exp = r'\D*?(\d+)\D*?'  #Тут напишите своё регулярное выражение
+    return re.findall(exp, text)
+
+print(find_all_digits(text))
 
