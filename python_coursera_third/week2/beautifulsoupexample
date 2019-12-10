@@ -1,0 +1,28 @@
+html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>test page</title>
+</head>
+<body class="mybody" id="js-body">
+<p class="text odd">first <b>bold</b> paragraph</p>
+<p class="text even">second <a href="https://mail.ru">link</a></p>
+<p class="list odd">third <a id="paragraph"><b>bold link</b></a></p>
+</body>
+</html>
+"""
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html, 'lxml')
+# soup.p.string = "s"
+res = soup
+
+import requests
+result = requests.get("https://news.mail.ru/")
+html = result.text
+soup = BeautifulSoup(html, "lxml")
+
+print([
+    (section.string,[
+        link.string for link in section.find_parents()[4].find_all("span", "link_text")
+    ])
+    for section in soup.find_all("span", "hdr_inner")
+])
