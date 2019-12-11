@@ -24,7 +24,17 @@ def build_tree(start, end, path):
                         link_for_next_layer.append(link)
             queue_of_links = link_for_next_layer
 
-
+def build_bridge(start, end, path):
+    tree = build_tree(start, end, path)
+    files = tree.copy()
+    for file in tree.keys():
+        if tree[file] is False :
+            del files[file]
+    acting_link, bridge = end, [end]
+    while acting_link is not start:
+        bridge.append(files[acting_link])
+        acting_link = files[acting_link]
+    return  bridge
 def parse(start, end, path):
     """
     Если не получается найти список страниц bridge, через ссылки на которых можно добраться от start до end, то,
@@ -33,7 +43,7 @@ def parse(start, end, path):
     Чтобы получить максимальный балл, придется искать все страницы. Удачи!
     """
 
-    bridge = build_tree(start, end, path)  # Искать список страниц можно как угодно, даже так: bridge = [end, start]
+    bridge = build_bridge(start, end, path)  # Искать список страниц можно как угодно, даже так: bridge = [end, start]
 
     # Когда есть список страниц, из них нужно вытащить данные и вернуть их
     out = {}
@@ -53,38 +63,6 @@ def parse(start, end, path):
 
     return out
 
-# def build_bridge(start, end, path):
-#     def build_tree(start, end, path):
-#         link_re = re.compile(r"(?<=/wiki/)[\w()]+")
-#         files = dict.fromkeys(os.listdir(path), False)
-#         current_links = [start]
-#         while current_links:
-#             new_links = []
-#             for name in current_links:
-#                 with open("{}{}".format(path, name)) as data:
-#                     links = re.findall(link_re, data.read())
-#                 for link in links:
-#                     if files.get(link) is False:
-#                         files[link] = name
-#                         print(link, name)
-#                         if link == end:
-#                             print(files)
-#                             return files
-#
-#                         new_links.append(link)
-#             current_links = new_links
-
-#     files = build_tree(start, end, path)
-#     # print(files)
-#     current_link, bridge = end, [end]
-#     # print(current_link, bridge)
-#     while current_link != start:
-#         current_link = files[current_link]
-#         bridge.append(current_link)
-#         print(current_link)
-#     return bridge
-#
-#
 # def parse(start, end, path):
 #     bridge = build_bridge(start, end, path)
 #
