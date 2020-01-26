@@ -13,12 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from rango import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^rango/', include('rango.urls')),
-    url(r'^admin/', admin.site.urls),
-]
+                  url(r'^$', views.index, name='index'),
+                  url(r'^rango/', include('rango.urls')),
+                  url(r'^admin/', admin.site.urls),
+                  url(r'^time/', views.current_time, name="current_time"),
+                  url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.show_category, name='show_category'),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

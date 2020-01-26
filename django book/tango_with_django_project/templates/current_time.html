@@ -1,0 +1,61 @@
+<!doctype html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url({{MEDIA_URL}}/images/brown-wooden-dock.jpg);
+            background-size: 100%%;
+              background-attachment: fixed;
+  background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            width: 100%;
+            background: #7efff2;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .current_time_wrapper {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 2em;
+            background: #ffd300;
+        }
+
+        .text_for_obtaining {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<!--<img src="{{MEDIA_URL}}/images/brown-wooden-dock.jpg">-->
+<header>
+    <h1>You have gotten to my site)</h1>
+</header>
+<div class="text_for_obtaining"> you can obtain your current time:</div>
+<article class="current_time_wrapper">{{ current_time }}</article>
+<footer>
+    Thanks
+</footer>
+</body>
+</html>
